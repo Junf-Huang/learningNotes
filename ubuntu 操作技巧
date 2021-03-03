@@ -1,0 +1,16 @@
+ubuntu 学习总结
+
+解压tar.gaz压缩包后， 看是否有Makefile文件
+安装命令： make， make install, make clean(清理临时文件）
+
+vi 常用操作命令：
+	[Ctrl] + f 屏幕向下移动一页（相当于Page Down键）
+	[Ctrl] + b 屏幕向上移动一页（相当于Page Up键）
+	/word      在文件中查找内容为word的字符串（向下查找）
+	?word      在文件中查找内容为word的字符串（向上查找）
+	dd         删除光标所在的一整行
+	yy         复制光标所在的那一行
+	p          粘贴
+	u          撤消上一个操作
+	.          这是小数点键，重复上一个操作
+

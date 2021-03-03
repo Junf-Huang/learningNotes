@@ -1,0 +1,116 @@
+No.1 ping baidu.com
+No.2 接入网络: 	wifi-menu
+No.3 同步时间: timedatectl set-ntp true
+N0.4 软件仓库: vim /etc/pacman.d/mirrorlist
+No.4 确定目标磁盘及目标分区: fdisk -l
+No.5 cfdisk 进行分区:  cfdisk /dev/sdX
+	分区策略：one primary+one swap+one extend(several logic as /home) 
+	mkswap /dev/sdxy
+	echo UUID=`lsblk -no UUID /dev/sdxy` none swap defaults 0 0 > /etc/fstab
+	swapon /dev/sdxy  || swapon -a
+	swap -s
+No.6 格式化: mkfs.ext4 /dev/sdXY ，swap不用格式化
+No.  挂载：mount /dev/sda1 /mnt
+	   mount /dev/sda2 /mnt/home
+
+ hwclock --systohc --utc 
+
+https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+http://bbs.archlinuxcn.org/viewtopic.php?id=1037
+http://bbs.archlinuxcn.org/viewtopic.php?id=3177
+https://wiki.archlinux.org/index.php/GDM_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+
+set tab key in vim
+    edit /etc/vimrc, add below content.
+    set ts=4
+    set expandtab
+    set autoindent
+
+
+分区：EPS(200M, FAT32)+gpt
+装系统:
+	1. win+linux,grub2引导
+	2. linux+ntfs3g(识别ntfs分区)+win
+systemctl enable NetworkManager
+装桌面:
+	显卡驱动+xorg+gnome(gnome have gdm(管理开机桌面引导))
+	systemctl enable gdm.service(set service running when computer start up) 	
+	systemctl enable NetworkManager	
+   
+improve boot's speed:
+    systemd-analyze: get total starting speed
+    systemd-analyze blame: get each service's starting time.
+    sudo systemctl --all | grep not-found：check the wrong item
+    systemctl mask xxx: turn off service
+    journalctl -b: view starting history
+    sudo systemctl list-unit-files --type=service | grep enabled: check enable' service items
+    systemctl list-unit-files --type=service: check all service items
+    sudo journalctl --vacuum-time=5d: will delete all logs but retain the last 5 days logs. Or vim /etc/systemd/journald.conf, set SystemMaxUse size.
+
+font config:
+	fc-match //current system font
+	fc-list //haven all fonts
+	fc-cache -vf  // update font cache  config
+
+sudo vim /etc/fonts/local.conf
+
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+<match>
+<test name="family"><string>sans</string></test>
+<edit name="family" mode="prepend" binding="strong">
+<string>Source Han Sans CN</string>
+</edit>
+</match>
+<match>
+<test name="family"><string>sans-serif</string></test>
+<edit name="family" mode="prepend" binding="strong">
+<string>Source Han Sans CN</string>
+</edit>
+</match>
+<match>
+<test name="family"><string>serif</string></test>
+<edit name="family" mode="prepend" binding="strong">
+<string>Source Han Sans CN</string>
+</edit>
+</match>
+<match>
+<test name="family"><string>monospace</string></test>
+<edit name="family" mode="prepend" binding="strong">
+<string>Source Han Sans CN</string>
+</edit>
+</match>
+<match>
+<test qual="all" name="family" compare="not_eq"><string>sans</string></test>
+<test qual="all" name="family" compare="not_eq"><string>sans-serif</string></test>
+<test qual="all" name="family" compare="not_eq"><string>serif</string></test>
+<test qual="all" name="family" compare="not_eq"><string>monospace</string></test>
+<edit name="family" mode="append_last">
+<string>Source Han Sans CN</string>
+</edit>
+</match>
+</fontconfig>
+
+ArchLinux使用中常见问题集锦
+https://blog.csdn.net/u011152627/article/details/38145125
+https://www.maoxuner.cn/2018/03/23/archlinux-as-usual.html
+
+ibus framework
+    sudo vim /usr/bin/wps wpp et
+    export XMODIFIERS="@im=ibus"
+    export QT_IM_MODULE="ibus"
+
+pacman -Qm 查找不在官方库安装的软件包
+
+normal using problem
+   when you meet black screen, firstly you can switch tty window to check whether you can enter system or not. If not, you can use a live usb containing Archlinux iso, mount /sda3 to /mnt, arch-chroot /mnt, then you can start opera on your system.
+   About Graphical user interface, installing xorg, nvidai or mesa and xf86-video-intal. In addtion, you need a desktop environment like gnome or kde. Now it doesn't need display manager like gdm because gnome has itself display manager.
+   
+repari boot 
+https://www.jianshu.com/p/5007e555ec12
+
+美化：
+pacman -S (papirus-icon-theme adapte-gtk-theme) 图标主题/shell主题
+在.theme下存放主题文件也可被识别到
+壁纸在/usr/share/backgrounds/xml文件设置

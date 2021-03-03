@@ -1,0 +1,67 @@
+﻿换源须知:http://www.linuxdiyf.com/linux/23122.html
+
+装机后必做
+http://www.cnblogs.com/itlyh/p/6009705.html
+sougoupinyin
+sudo apt-get install fcitx libssh2-1
+sudo apt-get - f install
+
+zsh
+https://github.com/robbyrussell/oh-my-zsh/
+
+美化
+http://blog.csdn.net/lj_550566181/article/details/50154143
+http://blog.csdn.net/terence1212/article/details/52270210
+http://www.jianshu.com/p/5b80711f304f
+
+为Firefox浏览器安装Flash插件
+http://jingyan.baidu.com/article/19192ad813700ce53e570796.html
+
+开机画面
+	sudo update-alternatives --config default.plymouth
+	sudo gksu -u gdm dbus-launch gnome-appearance-properties
+
+删除浏览器
+	dpkg --get-selections | grep firefox 
+	sudo apt-get purge firefox firefox-locale-en firefox-locale-zh-hans unity-scope-firefoxbookmarks		
+解压
+	sudo tar -zxvf wiznote-linux-x64-2013-07-31.tar.gz -C 目录
+安装 Unity Tweak Tool
+	sudo apt-get install unity-tweak-tool	 
+
+三种安装办法
+	http://www.cnblogs.com/xwdreamer/p/3623454.html
+cb
+	https://launchpad.net/~damien-moore/+archive/ubuntu/codeblocks-stable
+
+GNS3 
+https://www.qingsword.com/qing/472.html#CCNA-GNS3-IOU-1
+
+网易云音乐
+sudo apt-get install libqt5x11extras5
+sudo apt-get -f install
+.deb安装: dpkg -i 文件名
+netease-cloud-music 
+
+flash 更新问题
+http://www.jianshu.com/p/5214f417c6bc
+
+翻墙之xx-net
+sudo ./start
+http://127.0.0.1:8085/
+nohup sudo ./start > /dev/null &
+创建APPID
+https://github.com/XX-net/XX-Net/wiki/how-to-create-my-appids
+https://console.developers.google.com
+App引擎
+https://console.cloud.google.com/appengine/create?lang=python&project=sixth-guru-154813
+设置switchomega
+https://github.com/XX-net/XX-Net/wiki/%E4%BD%BF%E7%94%A8Chrome%E6%B5%8F%E8%A7%88%E5%99%A8
+
+Oracle jdk
+http://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/
+
+开热点
+sudo apt-get install hostapd
+sudo apt-get install dnsmasq
+https://github.com/oblique/create_ap/

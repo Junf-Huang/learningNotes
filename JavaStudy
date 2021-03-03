@@ -1,0 +1,17 @@
+監聽器(listener):
+1. 監聽服務器服務環境
+2. 監聽用戶會話
+3. 監聽請求消息
+ ServletRegistrationBean == WebServlet
+ FilterRegistrationBean == WebFilter
+ ServletListenerRegistrationBean == WebListener
+
+T与object的区别
+T:用一个变量来表示类型
+object:类层次结构的根，Java中所有的类从根本上都继承自这个类
+
+Java 8 新特性：
+Optional:https://blog.csdn.net/canot/article/details/52956230
+
+spring tips:
+you can't mix restful api and web server, when you use restful api,the paga cann't load css and js.

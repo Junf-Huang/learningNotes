@@ -1,0 +1,11 @@
+设计模式：MVC spring
+
+JSTL EL HTMl中展示数据
+
+response.sendRedirect();无法读取sesstion
+RequestDispatcher a =  
+
+WEB-INF中的网页不能直接访问，通过跳转实现
+
+servlet java 代码
+javabean　业务逻辑

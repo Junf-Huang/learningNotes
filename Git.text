@@ -1,0 +1,17 @@
+﻿http://www.yiibai.com/git/git_push.html
+
+git init //在本文件夹里初始化git仓库
+git add readme.txt　// 把文件添加到仓库
+git commit -m "wrote a readme file" //添加文件信息提示
+git status //可以让我们时刻掌握仓库当前的状态
+git diff readme.txt  //查看具体修改了什么内容
+git log //查看历史记录
+git checkout -- filename //可以丢弃(工作区)的修改,回到最近一次状态
+git reset HEAD file可以把(暂存区)的修改撤销掉（unstage），重新放回工作区
+git rm filename并且git commit filename从版本库中删除文件
+git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+ssh-keygen -t rsa -C "youremail@example.com" //创建SSH Key
+git remote add origin git@github.com:JustFairy/Code.git //链接github
+git push -u origin master //上传文件，把当前分支master推送到远程
+git clone git@github.com:JustFairy/hello-world.git //从远程库克隆文件到本地
+传送方式有https和ssh，ssh比较快，而且不用输入口令

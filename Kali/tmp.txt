@@ -1,0 +1,6 @@
+检测设备的开放端口和服务：dsploit和zanti
+
+主机发现（Host Discovery）
+端口扫描（Port Scanning）
+版本侦测（Version Detection）
+操作系统侦测（Operating System Detection）

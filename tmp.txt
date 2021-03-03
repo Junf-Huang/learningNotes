@@ -1,0 +1,92 @@
+true	Android Repository	https://dl.google.com/android/repository/repository2-1.xml
+true	Android System Images	https://dl.google.com/android/repository/sys-img/android/sys-img2-1.xml
+true	Android TV System Images	https://dl.google.com/android/repository/sys-img/android-tv/sys-img2-1.xml
+true	Android Wear System Images	https://dl.google.com/android/repository/sys-img/android-wear/sys-img2-1.xml
+true	Android Wear for China System Images	https://dl.google.com/android/repository/sys-img/android-wear-cn/sys-img2-1.xml
+true	Glass Development Kit, Google Inc.	https://dl.google.com/android/repository/glass/addon2-1.xml
+true	Google API add-on System Images	https://dl.google.com/android/repository/sys-img/google_apis/sys-img2-1.xml
+true	Google API with Playstore System Images	https://dl.google.com/android/repository/sys-img/google_apis_playstore/sys-img2-1.xml
+true	Google Inc.	https://dl.google.com/android/repository/addon2-1.xml
+true	Intel HAXM	https://dl.google.com/android/repository/extras/intel/addon2-1.xml
+true	Offline Repo	file:/opt/android-studio/plugins/sdk-updates/offline-repo/offline-repo.xml
+
+Google APIs Intel x86 Atom System Image 
+ln -s /usr/lib/libstdc++.so  ~/Android/Sdk/tools/lib64/libstdc++/
+
+
+关闭chrome浏览器。
+在终端（文件管理器）中进入 ~/.config/google-chrome/PepperFlash目录下，删除临时文件。
+sudo apt-get remove libflashplugin-pepper
+在终端执行sudo apt-get update && sudo apt-get install libflashplugin-pepper命令升级flash插件包。
+执行dpkg -l | grep libflashplugin-pepper 命令查看版本是否升级到27.0.0.183版本。
+打开chrome浏览器在地址栏执行chrome://plugins/命令（右上角详细信息），查看是否加载成功。
+or chrome://flash/
+
+export PS1='[\[\e[32;40m\]\u@\w]\$ '
+
+作业：android、植物鉴赏、毛概读书笔记
+
+实践章名单：罗圣 李上波 王楚忠 刘佛伟 黄毅殷 吴伟桐 陈柯帆 蔡志鹏 黄毅华 
+
+https://jitpack.io:载入库
+http://hao.jobbole.com/picasso/：强大的图片下载和缓存库
+xml错误会引发R无法识别
+android:theme="@style/AppTheme.NoActionBar" 程序崩溃闪退
+
+
+Kali Linux预装了许多渗透测试软件，包括 nmap (端口扫描器)、Wireshark (数据包分析器)、John the Ripper (密码破解器),以及 Aircrack -ng (一应用于对无线局域网进行渗透测试的软件)。另外，Metasploit的 Metasploit Framework也支持Kali Linux。Kali Linux是一个很容易上手的系统，有助于渗透测试人员熟悉业务并扩展知识面，在硬盘、live CD或live USB上都可以运行Kali Linux。
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:gravity="center_vertical"
+        android:background="@color/back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dttm"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvStatus"
+                android:layout_gravity="center_vertical"
+                style="@style/text"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_face"
+                android:layout_gravity="center_vertical"
+                android:drawSelectorOnTop="false">
+            </Spinner>
+        </LinearLayout>
+    </LinearLayout>
+
+adb usb
+
+adb tcpip 5555
+
+adb connect 192.168.10.1:5555
+
+
+
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text"
+            android:text="记住我"
+            android:id="@+id/cbRemember"
+            android:layout_gravity="center_vertical"
+            android:checked="false"/>
+

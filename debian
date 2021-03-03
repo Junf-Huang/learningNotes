@@ -1,0 +1,142 @@
+cp /home/hjj/Doc/sources.list /etc/apt/sources.list
+apt-get update
+g is group
+useradd -s /bin/zsh -g sudo -m junf
+
+apt-get install sudo vim git unzip daemon
+vim /etc/sudoers
+
+sudo dpkg -i mentohust_0.3.4-1_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get install -f
+
+source：使当前shell读入路径为filepath的shell文件并依次执行文件中的所有语句，通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录
+
+sudo apt-get install zsh git make python3-pip
+sudo apt-get install python-pip python-dev build-essential 
+sudo pip install --upgrade pip 
+sudo apt-get install -y gettext
+sudo apt install numix-gtk-theme
+
+Terminal 快捷键 gnome-terminal
+
+dpkg --get-selections | grep firefox
+sudo apt-get purge firefox-esr firefox-esr-l10n-zh-cn	
+
+sudo apt-get autoremove 
+sudo apt-get install ttf-wqy-zenhei
+
+git clone https://github.com/micheleg/dash-to-dock.git
+make
+make install
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+chsh -s /bin/zsh
+
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+sudo ./install.sh
+cd ..
+rm -rf fonts
+终端设置修改字体
+
+vim ~/.zshrc 设置主题
+ZSH_THEME="agnoster"
+DEFAULT_USER="$USER"
+
+vim ~/.oh-my-zsh/themes/agnoster.zsh-theme　　详细的主题设置
+由于oh_my_zsh时常会有版本更新，为了避免我们修改的跟更新的版本有冲突，建议不要修改agnoster.zsh-theme，而是将其拷贝出来，命名为自己的主题文件，比如叫做myagnoster.zsh-theme，然后只对myagnoster.zsh-theme进行修改。 
+
+Oracle jdk
+http://www.mkyong.com/java/how-to-install-oracle-jdk-8-on-debian/
+sudo update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_151/bin/java 100
+sudo update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.8.0_151/bin/javac 100
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+Oracle wget下载方法
+wget --http-user=1205331774@qq.com --ask-password "http://download.oracle.com/otn/linux/oracle11g/R2/linux.x64_11gR2_database_2of2.zip"
+
+开热点
+sudo apt-get install hostapd dnsmasq
+git clone https://github.com/oblique/create_ap
+cd create_ap
+sudo make install
+
+
+安装pycurl包
+pip install pycurl
+
+列出已经安装的python包
+pip list 
+
+输出pycurl包的信息
+pip show pycurl
+                    
+卸载pycurl包
+pip uninstall pycurl
+
+sudo apt-get install pip
+sudo easy_install pip
+sudo apt-get install python3-pip
+
+python3 -m venv my-env
+source my-env/bin/activate
+deactivate 
+
+pip3 install beautifulsoup4
+pip install Scrapy
+
+pydoc modulename
+
+//python3 setting
+"python.pythonPath": "/usr/bin/python3",
+"python.linting.pylintPath": "/usr/bin/pylint",
+
+
+pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.4.0-cp35-cp35m-linux_x86_64.whl
+
+ibus
+需要配置區域語言，添加輸入源
+http://wiki.ubuntu.org.cn/IBus#.E5.AE.89.E8.A3.9DIBus.E6.A1.86.E6.9E.B6.EF.BC.9A
+sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+sudo apt-get install ibus-rime librime-data-wubi
+im-config -s ibus //change input
+sudo ibus-setup
+
+fcitx
+皮膚難看
+http://wiki.ubuntu.org.cn/Fcitx
+sudo add-apt-repository ppa:fcitx-team/nightly && sudo apt-get update
+sudo apt-get install fcitx-rime
+sudo apt install librime-data-pinyin-simp 
+
+virtualbox
+sudo apt-get install linux-headers-$(uname -r)
+sudo /sbin/vboxconfig
+ sudo dpkg -i virtualbox-5.2_5.2.4-119785_Debian_stretch_amd64.deb 需要重新装一次
+
+全局命令
+1: ln -s /usr/local/nodejs/bin/node /usr/local/bin
+2: 在zshrc文件插入export PATH="$PATH:/usr/ngrok"
+
+
+PPA源的命令
+sudo add-apt-repository ppa:user/ppa-name
+ sudo apt-get update
+sudo add-apt-repository -r ppa:user/ppa-name
+然后进入 /etc/apt/sources.list.d 目录，将相应 ppa 源的保存文件删除。
+
+qmake||QT具体步骤如下：
+1、打开终端，sudo su命令切换到root用户；
+2、键入如下命令：cd /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/
+3、更改default.conf文件内容为qt路径：
+/home/kevin/Qt5.6.0/5.6/gcc_64/bin/
+/home/kevin/Qt5.6.0/5.6/
+4、保存并退出；
+5、键入exit命令回到一般用户，键入命令qmake或者qmake -v；出现相关描述信息即配置成功；
+
+D87IQPUU3Q-eyJsaWNlbnNlSWQiOiJEODdJUVBVVTNRIiwibGljZW5zZWVOYW1lIjoiTnNzIEltIiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IkZvciBlZHVjYXRpb25hbCB1c2Ugb25seSIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMTktMDItMDcifSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMTktMDItMDcifSx7ImNvZGUiOiJXUyIsInBhaWRVcFRvIjoiMjAxOS0wMi0wNyJ9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDE5LTAyLTA3In0seyJjb2RlIjoiUkMiLCJwYWlkVXBUbyI6IjIwMTktMDItMDcifSx7ImNvZGUiOiJEQyIsInBhaWRVcFRvIjoiMjAxOS0wMi0wNyJ9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDE5LTAyLTA3In0seyJjb2RlIjoiUk0iLCJwYWlkVXBUbyI6IjIwMTktMDItMDcifSx7ImNvZGUiOiJETSIsInBhaWRVcFRvIjoiMjAxOS0wMi0wNyJ9LHsiY29kZSI6IkFDIiwicGFpZFVwVG8iOiIyMDE5LTAyLTA3In0seyJjb2RlIjoiRFBOIiwicGFpZFVwVG8iOiIyMDE5LTAyLTA3In0seyJjb2RlIjoiR08iLCJwYWlkVXBUbyI6IjIwMTktMDItMDcifSx7ImNvZGUiOiJQUyIsInBhaWRVcFRvIjoiMjAxOS0wMi0wNyJ9LHsiY29kZSI6IkNMIiwicGFpZFVwVG8iOiIyMDE5LTAyLTA3In0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMTktMDItMDcifSx7ImNvZGUiOiJSU1UiLCJwYWlkVXBUbyI6IjIwMTktMDItMDcifV0sImhhc2giOiI4MDI4NjgyLzAiLCJncmFjZVBlcmlvZERheXMiOjAsImF1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsImlzQXV0b1Byb2xvbmdhdGVkIjpmYWxzZX0=-iPLvfrIl0qTga/F9rnjf0Sz6yYvw+2FWgZpcLOFbvb3CllsE2ui4+bw8emxzcYr3GyxN4/4BhfcX6gmmI4EJaTSihP+m4Oa8jZApb5zGEHENJE+I8hewQWIyiekNE7+21meJ3swPCYiTWKkUXMIVUWNfieZhqHd96dHpD335dSRCmAImgQ31qpmzemMxztu1/FAIiaUrav1VU/M0waj9B9xuhDG77PU7deSxX363RQjbmRdWBorjH6gSyUpCXnyh6Crlhtj+lC+VndAdnT4HUXXsmpCw6uLotL5Gv/TM7/fAqIjSQghlnm4vpss4Pc7xI9n07KwQE9ok4fuF3HMRUA==-MIIEPjCCAiagAwIBAgIBBTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE1MTEwMjA4MjE0OFoXDTE4MTEwMTA4MjE0OFowETEPMA0GA1UEAwwGcHJvZDN5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/5oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/78TmVqFl8nOeD5+07B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQC9WZuYgQedSuOc5TOUSrRigMw4/+wuC5EtZBfvdl4HT/8vzMW/oUlIP4YCvA0XKyBaCJ2iX+ZCDKoPfiYXiaSiH+HxAPV6J79vvouxKrWg2XV6ShFtPLP+0gPdGq3x9R3+kJbmAm8w+FOdlWqAfJrLvpzMGNeDU14YGXiZ9bVzmIQbwrBA+c/F4tlK/DV07dsNExihqFoibnqDiVNTGombaU2dDup2gwKdL81ua8EIcGNExHe82kjF4zwfadHk3bQVvbfdAwxcDy4xBjs3L4raPLU3yenSzr/OEur1+jfOxnQSmEcMXKXgrAQ9U55gwjcOFKrgOxEdek/Sk1VfOjvS+nuM4eyEruFMfaZHzoQiuw4IqgGc45ohFH0UUyjYcuFxxDSU9lMCv8qdHKm+wnPRb0l9l5vXsCBDuhAGYD6ss+Ga+aDY6f/qXZuUCEUOH3QUNbbCUlviSz6+GiRnt1kA9N2Qachl+2yBfaqUqr8h7Z2gsx5LcIf5kYNsqJ0GavXTVyWh7PYiKX4bs354ZQLUwwa/cG++2+wNWP+HtBhVxMRNTdVhSm38AknZlD+PTAsWGu9GyLmhti2EnVwGybSD2Dxmhxk3IPCkhKAK+pl0eWYGZWG3tJ9mZ7SowcXLWDFAk0lRJnKGFMTggrWjV8GYpw5bq23VmIqqDLgkNzuoog==
+ssh:
+> cat ~/.ssh/id_rsa.pub | ssh root@111.230.64.92 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+> vim /etc/ssh/sshd_conf for PubkeyAuthentication yes  

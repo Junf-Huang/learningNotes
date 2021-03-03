@@ -1,0 +1,16 @@
+HBuilder-Hello 和HBuilder-Integrate 这两个是eclipse的工程示例 HBuilder-Integrate-AS 是Android Studio的工程示例
+HBuilder-Hello入口为io.dcloud.PandoraEntry这个类，该入口和HBuilder IDE云打包生产的apk入口一致。
+HBuilder-Integrate和HBuilder-Integrate-AS的入口均为com.HBuilder.integrate.ActivityEntry这个类，开发者可以通过配置清单文件中
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+实现更改入口activity。
+
+
+
+示例中增加io.dcloud.RInformation.java 为引用应用资源编写，开发者修改包名需同时修改其引用的包名,但文件存放的包名不能修改
+离线工程如何配置请参考文档  http://ask.dcloud.net.cn/article/924
+插件如何配置请参考文档      http://ask.dcloud.net.cn/article/216
+插件配置也可参考Feature-Android.xls文件，该文件内有API和用到的jar包的对应关系和工程的androidmainfest.xml文件的配置方法

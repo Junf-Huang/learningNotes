@@ -1,0 +1,19 @@
+Installation in Archlinux：
+    pacman -S opencv gtkglext hdf5 python-numpy
+optional packages: opencl-icd-loader opencv-samples
+explanation:
+    hdf5是一种数据格式、可以存储不同类型的图像和数码数据
+    NumPy是高性能科学计算和数据分析的基础包
+    HighGUI是一个可以移植的图形工具包，显示图像，读写图像相关的文件
+Configure opencv in eclipse:
+    add include and add lib
+    compiler path: /usr/include
+    linker path: /usr/lib /usr/lib64, and add libraries' names: opencv_core opencv_imgproc opencv_imgcodecs opencv_highgui opencv_ml opencv_videoio opencv_video opencv_features2d opencv_calib3d opencv_objdetect opencv_flann
+
+    灰度图=单通道图，彩色图=三通道图
+    处理图片，除了对图片局部空间的分析，还有通道、图层等的信息（SCA-CNN）
+    CVPR:https://www.jianshu.com/p/580564d654f5?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+
+    
+
+

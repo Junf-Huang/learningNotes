@@ -1,0 +1,46 @@
+# JSON(JavaScript Object Notation)
+
+轻量级的文本数据交换格式
+
+## 书写格式：
+
+key:value
+
+"name" : "菜鸟教程" 等价于　name = "菜鸟教程"
+
+值可以是:数字、字符串（在双引号中）、逻辑值、数组（在中括号中）、对象（在大括号中）、null、
+
+示例：
+
+JSON 对象　var myjson = { "name":"菜鸟教程" , "url":"www.runoob.com" }
+JSON 数组　{
+	"sites": [
+	{ "name":"菜鸟教程" , "url":"www.runoob.com" }, 
+	{ "name":"google" , "url":"www.google.com" }, 
+	{ "name":"微博" , "url":"www.weibo.com" }
+	]
+}
+sites[0].name == runoob
+
+嵌套 JSON 对象
+
+myObj = {
+    "name":"runoob",
+    "alexa":10000,
+    "sites": {
+        "site1":"www.runoob.com",
+        "site2":"m.runoob.com",
+        "site3":"c.runoob.com"
+    }
+}
+
+删除对象属性
+
+delete myObj.name;
+out:{
+    "alexa":10000,
+    "sites": {
+        "site1":"www.runoob.com",
+        "site2":"m.runoob.com",
+        "site3":"c.runoob.com"
+    }

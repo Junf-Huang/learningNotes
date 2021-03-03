@@ -1,0 +1,23 @@
+ReactNative dcloud
+
+开发ide android studio
+
+后台服务器：mysql+servlet+tomcat in linux
+
+画图：墨刀
+IDE：android studio 3.0.1
+第三方框架：5+SDK（dcloud）
+服务端：mysql+servlet+tomcat in linux
+
+UI设计
+http://www.ui.cn/detail/296972.html
+http://www.25xt.com/appdesign/12781.html
+
+Android平台以Widget方式集成HTML5+SDK方法
+http://ask.dcloud.net.cn/article/81
+开发MUI插件入坑指南
+http://watasi.cn/2017/08/11/%E4%BD%BF%E7%94%A8Android%20Studio%E5%BC%80%E5%8F%91MUI%E6%8F%92%E4%BB%B6%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/
+Android创建最精简离线打包工程
+http://ask.dcloud.net.cn/article/924
+
+加入课程安排和学习资料
